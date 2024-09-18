@@ -44,7 +44,9 @@ async function init() {
 }
 
 // Fungsi untuk menangani pemilihan kandidat
-async function kirim() {
+kirim(0)
+async function kirim(i) {
+    if(i !== 1) return
     // Cek apakah ada kandidat yang dipilih
     const selectedKandidat = document.querySelector("input[name='osis']:checked");
     

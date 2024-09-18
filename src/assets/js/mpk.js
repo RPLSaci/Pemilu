@@ -34,8 +34,9 @@ async function init(){
     }
 }
 
-    
-async function kirim() {
+kirim(0)
+async function kirim(i) {
+    if(i !== 1) return
     if(!document.querySelector("input[name='kandidat']:checked")) alert("Pilihlah 1 kandidat")
     const selectedKandidat = document.querySelector("input[name='kandidat']:checked").value;
     alert(`Kandidat yang dipilih: ${selectedKandidat}`);
