@@ -39,14 +39,15 @@ async function kirim() {
     if(!document.querySelector("input[name='kandidat']:checked")) alert("Pilihlah 1 kandidat")
     const selectedKandidat = document.querySelector("input[name='kandidat']:checked").value;
     alert(`Kandidat yang dipilih: ${selectedKandidat}`);
+    localStorage.setItem("Pilihan", JSON.stringify({"MPK":selectedKandidat}))
 
-    const response = await fetch("https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev/api/user/login", {
-        method: "POST", // HTTP method
-        headers: {
-            "Content-Type": "application/json", // Specify the content type
-        },
-        body: JSON.stringify({ username:data.username, password:data.password }), // Convert the data to a JSON string
-    });
+    // const response = await fetch("https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev/api/user/login", {
+    //     method: "POST", // HTTP method
+    //     headers: {
+    //         "Content-Type": "application/json", // Specify the content type
+    //     },
+    //     body: JSON.stringify({ username:data.username, password:data.password }), // Convert the data to a JSON string
+    // });
     
-    // document.location.href = "./osis.html"
+    document.location.href = "./osis.html"
 }

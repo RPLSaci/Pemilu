@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./assets/css/main.css">
+  <script src="./assets/js/osis.js"></script>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -21,74 +21,105 @@
     .btn-primary {
       background-color: #007BFF;
     }
+
+    .kandidat-card {
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .selected-card {
+      background-color: #e0f7fa; /* Contoh warna untuk card yang dipilih */
+    }
+
+    .btn-osis {
+      background-color: #007BFF;
+      border: none;
+    }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const kandidatCards = document.querySelectorAll("input[name='osis']");
+  
+      kandidatCards.forEach((input) => {
+        input.addEventListener("change", function() {
+          // Hapus kelas "selected-card" dari semua card
+          document.querySelectorAll(".kandidat-card").forEach((card) => {
+            card.classList.remove("selected-card");
+          });
+  
+          // Tambahkan kelas "selected-card" ke card yang dipilih
+          const selectedCard = this.closest("label");
+          selectedCard.classList.add("selected-card");
+        });
+      });
+    });
+  </script>
 </head>
 
-
 <header>
-  <nav
-      class="px-2 sm:px-4 py-2.5 bg-mpk-600 fixed w-full z-20 top-0 left-0 border-b border-mpk-200">
-      <div class="container flex flex-wrap items-center justify-between mx-auto">
-          <a href="/" class="flex items-center">
-              <img src="./assets/img/logo.02c1cc2a.png" class="h-6 mr-3 sm:h-9" alt="MOSANSA Logo">
-              <span class="self-center text-xl font-semibold whitespace-nowrap text-white">MOSANSA</span>
-          </a>
-          <div class="flex md:order-2">
-            <span class="self-center text-xl font-semibold whitespace-nowrap text-white" id="usn"></span>
-              <!-- <a href="./login.html" role="button" -->
-                  <!-- class="self-center ml-4 text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 bg-osis focus:ring-blue-800">Login</a> -->
-          </div>
-          <div class="font-bold items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-              id="navbar-sticky">
-
-          </div>
+  <nav class="px-2 sm:px-4 py-2.5 bg-mpk-600 fixed w-full z-20 top-0 left-0 border-b border-mpk-200">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="/" class="flex items-center">
+        <img src="./assets/img/logo.02c1cc2a.png" class="h-6 mr-3 sm:h-9" alt="MOSANSA Logo">
+        <span class="self-center text-xl font-semibold whitespace-nowrap text-white">MOSANSA</span>
+      </a>
+      <div class="flex md:order-2">
+        <span class="self-center text-xl font-semibold whitespace-nowrap text-white" id="usn"></span>
       </div>
+    </div>
   </nav>
 </header>
 
 <body class="bg-mpk min-h-screen flex flex-col justify-center items-center">
-  <!-- Header -->
-
   <h1 class="mt-[5rem] text-2xl text-white font-semibold">Calon Ketua OSIS 2024/2025</h1>
 
   <!-- Form Username dan Password -->
   <section class="mt-6 w-full max-w-4xl">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
       <!-- Kandidat 1 -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <img src="./assets/img/osis1.png" alt="Kandidat 1" class="w-full object-cover rounded-md">
-        <h2 class="text-xl font-semibold mt-4">Lee Ghar Mahessa J.</h2>
-        <p class="mt-2 text-gray-600">Deskripsi singkat tentang kandidat 1.</p>
-      </div>
+      <label for="osis1" class="kandidat-card cursor-pointer">
+        <input type="radio" id="osis1" name="osis" value="1" class="hidden">
+        <div class="bg-white p-6 rounded-lg w-[80%] lg:w-full m-auto shadow-md">
+          <img src="./assets/img/osis1.png" alt="Kandidat 1" class="w-full object-cover rounded-md">
+          <h2 class="text-xl font-semibold mt-4">Lee Ghar Mahessa J.</h2>
+          <p class="mt-2 text-gray-600">kandidat 1.</p>
+        </div>
+      </label>
 
       <!-- Kandidat 2 -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <img src="./assets/img/osis2.png" alt="Kandidat 2" class="w-full object-cover rounded-md">
-        <h2 class="text-xl font-semibold mt-4">M. Ival Ardatta.</h2>
-        <p class="mt-2 text-gray-600">Deskripsi singkat tentang kandidat 2.</p>
-      </div>
+      <label for="osis2" class="kandidat-card cursor-pointer">
+        <input type="radio" id="osis2" name="osis" value="2" class="hidden">
+        <div class="bg-white p-6 rounded-lg w-[80%] lg:w-full m-auto shadow-md">
+          <img src="./assets/img/osis2.png" alt="Kandidat 2" class="w-full object-cover rounded-md">
+          <h2 class="text-xl font-semibold mt-4">M. Ival Ardatta.</h2>
+          <p class="mt-2 text-gray-600">kandidat 2.</p>
+        </div>
+      </label>
 
       <!-- Kandidat 3 -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <img src="./assets/img/osis3.png" alt="Kandidat 3" class="w-full object-cover rounded-md">
-        <h2 class="text-xl font-semibold mt-4">Syafira Syeikha</h2>
-        <p class="mt-2 text-gray-600">Deskripsi singkat tentang kandidat 3.</p>
-      </div>
+      <label for="osis3" class="kandidat-card cursor-pointer">
+        <input type="radio" id="osis3" name="osis" value="3" class="hidden">
+        <div class="bg-white p-6 rounded-lg w-[80%] lg:w-full m-auto shadow-md">
+          <img src="./assets/img/osis3.png" alt="Kandidat 3" class="w-full object-cover rounded-md">
+          <h2 class="text-xl font-semibold mt-4">Syafira Syeikha</h2>
+          <p class="mt-2 text-gray-600">kandidat 3.</p>
+        </div>
+      </label>
 
       <!-- Kandidat 4 -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <img src="./assets/img/osis4.png" alt="Kandidat 4" class="w-full object-cover rounded-md">
-        <h2 class="text-xl font-semibold mt-4">Altaqirani Farchannaima Zannata</h2>
-        <p class="mt-2 text-gray-600">Deskripsi singkat tentang kandidat 4.</p>
-      </div>
+      <label for="osis4" class="kandidat-card cursor-pointer">
+        <input type="radio" id="osis4" name="osis" value="4" class="hidden">
+        <div class="bg-white p-6 rounded-lg w-[80%] lg:w-full m-auto shadow-md">
+          <img src="./assets/img/osis4.png" alt="Kandidat 4" class="w-full object-cover rounded-md">
+          <h2 class="text-xl font-semibold mt-4">Altaqirani Farchannaima Zannata</h2>
+          <p class="mt-2 text-gray-600">kandidat 4.</p>
+        </div>
+      </label>
     </div>
+    
+    <button type="submit" onclick="kirim()" class="left-0 btn text-white px-4 py-2 mt-4 rounded transition duration-300 w-[100%] lg:absolute relative bottom-0">
+      Pilih
+    </button>
   </section>
-
-  <button class="btn-osis btn text-white px-4 py-2 mt-4 rounded transition duration-300 w-[100%] absolute bottom-0">Pilih</button>
-  <!-- Daftar Kandidat -->
-
-
-  <!-- Footer -->
 </body>
-
 </html>

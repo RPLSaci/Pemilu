@@ -7,6 +7,7 @@
     "buildNotRoot": "parcel build --public-url 'templateTailwind' src/*.html"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "autoprefixer": "^10.4.7",
     "daisyui": "^2.15.1",
     "flowbite": "^1.5.1",
