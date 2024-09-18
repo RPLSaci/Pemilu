@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "buildNotRoot": "parcel build --public-url 'templateTailwind' src/*.html"
+    "buildNotRoot": "parcel build --public-url '/Pemilu' src/*.html"
   },
   "dependencies": {
     "aos": "^2.3.4",
