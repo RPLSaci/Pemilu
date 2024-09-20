@@ -3,23 +3,13 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 
 async function sendData() {
-            const response = await fetch('https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev/api/user/getAll');
-
-
-            let body = await response.json();
-            let data = body.data
-            for (let element of data) {
-                console.log("Migrasi UserPemilu "+element.username+"-"+element.nisn)
-                if(element.password.length === 5){
-                    console.log("Migrasi UserPemilu "+element.username+"-"+element.nisn + " FAILED : SUDAH TERMIGRASI")
-                }                         
                 const data1 = {
-                            nisn: element.nisn,
-                            password: element.password
+                            nisn: "0078221124",
+                            password: "paskah"
                         };
                 
                         try {
-                            const response = await fetch('https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev/api/migrasi', {
+                            const response = await fetch('https://8080-rplsaci-pemiluapi-jfvwph8s12t.ws-us116.gitpod.io/api/migrasi', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'
@@ -28,6 +18,7 @@ async function sendData() {
                             });
                 
                             const result = await response.text();
+                            console.log(result)
                             if(response.status !== 501){
                                 console.log("BERHASIL MIGRASI USER")
                             }
@@ -37,7 +28,6 @@ async function sendData() {
                         } catch (err) {
                             console.log(err)
                         }
-                    } 
                     
 }
 

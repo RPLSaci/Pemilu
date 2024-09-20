@@ -4,7 +4,7 @@ async function login() {
     const password = document.querySelector("#password").value;
 
     try {
-        const response = await fetch("https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev/api/user/login", {
+        const response = await fetch(BASEAPI + "/api/user/login", {
             method: "POST", // HTTP method
             headers: {
                 "Content-Type": "application/json", // Specify the content type
