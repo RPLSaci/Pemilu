@@ -17,5 +17,6 @@ async function init() {
     });
 }
 init();
+setInterval(init, 5000);
 
-//# sourceMappingURL=cekSuara.bb2a5334.js.map
+//# sourceMappingURL=cekSuara.f7b5972b.js.map
