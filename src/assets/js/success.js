@@ -277,6 +277,7 @@ async function kirim() {
         }
         console.log((await responseAkhir.text()))
         alert("Terimakasih Telah Memilih")
+        document.location.href = "./sudahMemilih.html"
         }
     } catch (error) {
         console.log(error)
