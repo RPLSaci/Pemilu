@@ -259,6 +259,7 @@ async function kirim() {
             if (responseAkhir.stat === 401) alert("Kamu Sudah Memilih");
             console.log(await responseAkhir.text());
             alert("Terimakasih Telah Memilih");
+            document.location.href = "./sudahMemilih.html";
         }
     } catch (error) {
         console.log(error);
@@ -267,4 +268,4 @@ async function kirim() {
 }
 init();
 
-//# sourceMappingURL=success.e2de059a.js.map
+//# sourceMappingURL=success.d44b467c.js.map
