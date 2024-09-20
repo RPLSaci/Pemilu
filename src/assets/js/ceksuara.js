@@ -27,3 +27,5 @@ async function init() {
 }
 
 init();
+
+setInterval(init, 5 * 1000)
