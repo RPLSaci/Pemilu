@@ -1,5 +1,6 @@
 init();
 async function init() {
+    let BASEAPI = "https://8080-rplsaci-pemiluapi-jfvwph8s12t.ws-us116.gitpod.io";
     const data = JSON.parse(localStorage.getItem("loginObject"));
     console.log(data);
     if (!data || !localStorage.getItem("loginObject")) {
@@ -7,7 +8,7 @@ async function init() {
         document.location.href = "./index.html";
     }
     try {
-        const response = await fetch("https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev/api/user/login", {
+        const response = await fetch(BASEAPI + "/api/user/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -46,4 +47,4 @@ async function kirim(i) {
     document.location.href = "./osis.html";
 }
 
-//# sourceMappingURL=mpk.7e32677d.js.map
+//# sourceMappingURL=mpk.6b7317f0.js.map

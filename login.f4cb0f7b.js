@@ -2,7 +2,7 @@ async function login() {
     const username = document.querySelector("#username").value;
     const password = document.querySelector("#password").value;
     try {
-        const response = await fetch("https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev/api/user/login", {
+        const response = await fetch(BASEAPI + "/api/user/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -37,4 +37,4 @@ async function login() {
 // Example usage, assuming there's a button with id "loginButton"
 document.querySelector("#loginButton").addEventListener("click", login);
 
-//# sourceMappingURL=login.ec050a6d.js.map
+//# sourceMappingURL=login.f4cb0f7b.js.map

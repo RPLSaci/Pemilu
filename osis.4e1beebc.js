@@ -1,6 +1,7 @@
 // Inisialisasi fungsi
 init();
 async function init() {
+    let BASEAPI = "https://8080-rplsaci-pemiluapi-jfvwph8s12t.ws-us116.gitpod.io";
     // Ambil data login dari localStorage
     const data = JSON.parse(localStorage.getItem("loginObject"));
     console.log(data);
@@ -12,7 +13,7 @@ async function init() {
     }
     try {
         // Lakukan permintaan POST untuk memverifikasi pengguna
-        const response = await fetch("https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev/api/user/login", {
+        const response = await fetch(BASEAPI + "/api/user/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -53,10 +54,10 @@ async function kirim(i) {
             alert("Kamu harus pilih MPK Dahulu");
             document.location.href = "./mpk.html";
         }
-        localStorage.setItem("Pilihan", {
-            "MPK": pilihan.mpk,
+        localStorage.setItem("Pilihan", JSON.stringify({
+            "MPK": pilihan.MPK,
             "OSIS": kandidatValue
-        });
+        }));
         // Kirim data pemilihan ke server
         // const response = await fetch("https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev/api/vote", {
         //     method: "POST",
@@ -83,4 +84,4 @@ async function kirim(i) {
     }
 }
 
-//# sourceMappingURL=osis.3e4415be.js.map
+//# sourceMappingURL=osis.4e1beebc.js.map
