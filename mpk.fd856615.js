@@ -20,9 +20,16 @@ async function init() {
         });
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const result = await response.json(); // Parse the response as JSON
+        console.log(result);
         if (result.error) ;
-        else // Handle successful login
-        document.querySelector("#usn").textContent = result.user.username;
+        else {
+            if (result.SudahMemilih || result.user.WaktuPemilihan) {
+                alert("Kamu sudah Memilih");
+                document.location.href = "./sudahMemilih.html";
+            }
+            // Handle successful login
+            document.querySelector("#usn").textContent = result.user.username;
+        }
     } catch (error) {
         console.error("An error occurred while logging in", error);
         alert("An error occurred while logging in. Please try again.");
@@ -47,4 +54,4 @@ async function kirim(i) {
     document.location.href = "./osis.html";
 }
 
-//# sourceMappingURL=mpk.6b7317f0.js.map
+//# sourceMappingURL=mpk.fd856615.js.map

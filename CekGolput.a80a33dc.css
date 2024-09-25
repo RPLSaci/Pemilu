@@ -3827,6 +3827,10 @@ h6 {
   overflow: hidden;
 }
 
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -3969,6 +3973,11 @@ h6 {
   padding-right: 1.25rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-2 {
   padding-top: .5rem;
   padding-bottom: .5rem;
@@ -3982,6 +3991,11 @@ h6 {
 .py-3 {
   padding-top: .75rem;
   padding-bottom: .75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-12 {
@@ -4006,6 +4020,10 @@ h6 {
 
 .pt-\[2\.5rem\] {
   padding-top: 2.5rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -4042,6 +4060,11 @@ h6 {
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: .75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -4052,6 +4075,10 @@ h6 {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .italic {
@@ -4195,6 +4222,10 @@ p.mt-2.text-gray-600 {
   }
 }
 
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
 .focus\:outline-none:focus {
   outline-offset: 2px;
   outline: 2px solid #0000;
@@ -4219,6 +4250,10 @@ p.mt-2.text-gray-600 {
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:rounded-lg {
+    border-radius: .5rem;
   }
 
   .sm\:px-4 {
@@ -4322,4 +4357,8 @@ p.mt-2.text-gray-600 {
     line-height: 2.5rem;
   }
 }
-/*# sourceMappingURL=cekSuara.8c0f07ae.css.map */
+
+.rtl\:text-right:where([dir="rtl"], [dir="rtl"] *) {
+  text-align: right;
+}
+/*# sourceMappingURL=CekGolput.a80a33dc.css.map */

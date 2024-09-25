@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>MPK - OSIS SMAN 1 CIKAMPEK</title>
     <link rel="stylesheet" href="/Pemilu/CekGolput.a80a33dc.css">
-    <script src="/Pemilu/cekSuara.57233e22.js" defer=""></script>
+    <script src="/Pemilu/cekPemilih.83823d41.js" defer=""></script>
     <script src="/Pemilu/CekGolput.87ad4627.js" defer=""></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer=""></script>
 </head>
@@ -30,68 +30,40 @@
 </header>
 
 <body class="pt-14 text-white">
-    <section id="mpkTotal" class="bg-mpk p-14 " data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-        <div class="container w-[90%] mx-auto animate__animated animate__fadeUp">
-            <div class="grid lg:grid-cols-4 gap-10 items-center">
-                    <section id="mpk" class="bg-mpk p-4 " data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                                    <img src="/Pemilu/mpk1-1.ad653560.png" class=" rounded-xl w-[60%] rounded-xl mx-auto" alt="">
-                                    <h3 class="text-3xl text-center lg:text-left font-bold">Muhamad Fairuz Fadilah</h3>
-                                    <p class="italic mt-4" id="1">
-                                    </p>
-                    </section>
-                    <section id="mpk" class="bg-mpk p-4 " data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                                    <img src="/Pemilu/mpk2-2.e5f400c9.png" class=" rounded-xl w-[60%] mx-auto" alt="">
-                                    <h3 class="text-3xl text-center lg:text-left font-bold">Arnelita Dwiputriya S.</h3>
-                                    <p class="italic mt-4" id="2">
-                                    </p>
-                    </section>
-                    <section id="mpk" class="bg-mpk p-4 " data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                                    <img src="/Pemilu/mpk3-3.40cc838d.png" class=" rounded-xl w-[60%] mx-auto" alt="">
-                                    <h3 class="text-3xl text-center lg:text-left font-bold">Ratu Mayzan Saviara R.</h3>
-                                    <p class="italic mt-4" id="3">
-                                    </p>
-                    </section>
-                    <section id="mpk" class="bg-mpk p-4 " data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                                    <img src="/Pemilu/mpk4-4.f32d58da.png" class=" rounded-xl w-[60%] mx-auto" alt="">
-                                    <h3 class="text-3xl text-center lg:text-left font-bold">Tina Maribela Falez</h3>
-                                    <p class="italic mt-4" id="4">
-                                    </p>
-                    </section>                
-                </div>
-            </div>
-        
-    </section>
-    <section id="osisTotal" class="bg-osis p-14" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-        <div class="container w-[90%] mx-auto animate__animated animate__fadeUp">
-            <div class="grid lg:grid-cols-4 gap-10 items-center">
-                <section id="osis" class="bg-osis p-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                    <img src="/Pemilu/osis1-1.10cf87e0.png" class="rounded-xl w-[60%] mx-auto" alt="">
-                    <h3 class="text-3xl text-center lg:text-left font-bold">Lee Ghar Mahessa J.</h3>
-                    <p class="italic mt-4" id="1"></p>
-                </section>
-    
-                <section id="osis" class="bg-osis p-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                    <img src="/Pemilu/osis2-2.212ba2aa.png" class="rounded-xl w-[60%] mx-auto" alt="">
-                    <h3 class="text-3xl text-center lg:text-left font-bold">M. Ival Ardatta.</h3>
-                    <p class="italic mt-4" id="2"></p>
-                </section>
-    
-                <section id="osis" class="bg-osis p-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                    <img src="/Pemilu/osis3-3.95d981c7.png" class="rounded-xl w-[60%] mx-auto" alt="">
-                    <h3 class="text-3xl text-center lg:text-left font-bold">Syafira Syeikha</h3>
-                    <p class="italic mt-4" id="3"></p>
-                </section>
-    
-                <section id="osis" class="bg-osis p-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                    <img src="/Pemilu/osis4-4.e7c9c765.png" class="rounded-xl w-[60%] mx-auto" alt="">
-                    <h3 class="text-3xl text-center lg:text-left font-bold">Altaqirani Farchannaima Zannata</h3>
-                    <p class="italic mt-4" id="4"></p>
-                </section>
-            </div>
-        </div>
-    </section>
-    
 
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 w-[80%] m-auto">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Nama
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        NISN
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Kandidat MPK
+                    </th>
+                    
+                    <th scope="col" class="px-6 py-3">
+                        Kandidat OSIS
+                    </th>
+                    
+                    <th scope="col" class="px-6 py-3">
+                        Waktu Pemilihan
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Hapus Pilihan
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    
     <button data-collapse-toggle="navbar-sticky" type="button" class="fixed bottom-0 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 text-gray-400 hover:bg-gray-700 focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -125,6 +97,101 @@
 </footer>
 
 <div class="hidden bg-primary w-96" id="placeholder">
+    
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Product name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Color
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Category
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4">
+                    Silver
+                </td>
+                <td class="px-6 py-4">
+                    Laptop
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Microsoft Surface Pro
+                </th>
+                <td class="px-6 py-4">
+                    White
+                </td>
+                <td class="px-6 py-4">
+                    Laptop PC
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Magic Mouse 2
+                </th>
+                <td class="px-6 py-4">
+                    Black
+                </td>
+                <td class="px-6 py-4">
+                    Accessories
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Google Pixel Phone
+                </th>
+                <td class="px-6 py-4">
+                    Gray
+                </td>
+                <td class="px-6 py-4">
+                    Phone
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Apple Watch 5
+                </th>
+                <td class="px-6 py-4">
+                    Red
+                </td>
+                <td class="px-6 py-4">
+                    Wearables
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
     <div class="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-4">
     </div>
     <div class="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-2 gap-4">
@@ -150,5 +217,5 @@
             </div>
         </div>
     </div>
-
-</div></html>
+</div>
+</html>

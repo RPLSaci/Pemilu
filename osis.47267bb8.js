@@ -25,12 +25,19 @@ async function init() {
         });
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const result = await response.json();
+        console.log(result);
         if (result.error) {
             // Tangani kesalahan jika ada
             console.error("Login failed: ", result.error);
             alert("Login failed. Please try again.");
-        } else // Tampilkan nama pengguna jika login berhasil
-        document.querySelector("#usn").textContent = result.user.username;
+        } else {
+            // Tampilkan nama pengguna jika login berhasil
+            if (result.SudahMemilih || result.user.WaktuPemilihan) {
+                alert("Kamu sudah Memilih");
+                document.location.href = "./sudahMemilih.html";
+            }
+            document.querySelector("#usn").textContent = result.user.username;
+        }
     } catch (error) {
         console.error("An error occurred while logging in", error);
         alert("An error occurred while logging in. Please try again.");
@@ -84,4 +91,4 @@ async function kirim(i) {
     }
 }
 
-//# sourceMappingURL=osis.4e1beebc.js.map
+//# sourceMappingURL=osis.47267bb8.js.map
