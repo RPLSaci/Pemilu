@@ -4,7 +4,7 @@ async function init() {
     let i = 0
     console.log(data)
     data.data.filter((e) => !e.WaktuPemilihan).forEach(element => {
-        if(i < 50) {
+        if(i < 200) {
             document.querySelector("tbody#tbody").innerHTML += `
             <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
