@@ -2,7 +2,7 @@
 init();
 
 async function init() {
-    let BASEAPI = "https://8080-rplsaci-pemiluapi-jfvwph8s12t.ws-us116.gitpod.io"
+    let BASEAPI = "https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev"
     // Ambil data login dari localStorage
     const data = JSON.parse(localStorage.getItem("loginObject"));
     console.log(data);
