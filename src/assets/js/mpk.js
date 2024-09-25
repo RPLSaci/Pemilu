@@ -23,9 +23,14 @@ async function init(){
         }
 
         const result = await response.json(); // Parse the response as JSON
-
+        console.log(result)
+        
         if (result.error) {
         } else {
+            if(result.SudahMemilih || result.user.WaktuPemilihan) {
+                alert("Kamu sudah Memilih")
+                document.location.href = "./sudahMemilih.html"
+            }
             // Handle successful login
             document.querySelector("#usn").textContent = result.user.username
         }

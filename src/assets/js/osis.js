@@ -29,6 +29,7 @@ async function init() {
         }
 
         const result = await response.json();
+        console.log(result)
 
         if (result.error) {
             // Tangani kesalahan jika ada
@@ -36,6 +37,10 @@ async function init() {
             alert("Login failed. Please try again.");
         } else {
             // Tampilkan nama pengguna jika login berhasil
+            if(result.SudahMemilih || result.user.WaktuPemilihan) {
+                alert("Kamu sudah Memilih")
+                document.location.href = "./sudahMemilih.html"
+            }
             document.querySelector("#usn").textContent = result.user.username;
         }
     } catch (error) {

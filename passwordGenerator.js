@@ -1,79 +1,20 @@
-let data =[
-    {"nama": "Agus Setiawan", "kode": 1},
-    {"nama": "Duimaryono", "kode": 2},
-    {"nama": "Lia Herliasih", "kode": 3},
-    {"nama": "Sumarsih", "kode": 4},
-    {"nama": "Ika Rachmatin", "kode": 5},
-    {"nama": "Wiwin Widiantini", "kode": 6},
-    {"nama": "Trie Aprilda R", "kode": 7},
-    {"nama": "Suherman", "kode": 8},
-    {"nama": "Ateng Suhenda", "kode": 9},
-    {"nama": "Karsidi", "kode": 10},
-    {"nama": "Sumerto", "kode": 11},
-    {"nama": "Nunuy Nurokhmah", "kode": 12},
-    {"nama": "Endang Sudirman", "kode": 13},
-    {"nama": "Irma Sari Dewi", "kode": 14},
-    {"nama": "Ety Wachyuni", "kode": 15},
-    {"nama": "Eni Setiani", "kode": 16},
-    {"nama": "Ai Setiawati", "kode": 17},
-    {"nama": "Joko Sulistyo", "kode": 18},
-    {"nama": "Nur'aeni", "kode": 19},
-    {"nama": "Sukma Permanajaya", "kode": 20},
-    {"nama": "Yeni Nurandayani", "kode": 21},
-    {"nama": "Bayu Vickmasenagora", "kode": 22},
-    {"nama": "Azizul Fadli", "kode": 23},
-    {"nama": "Ivansyah", "kode": 24},
-    {"nama": "Yakub Priyono", "kode": 25},
-    {"nama": "Dwi Setiyano", "kode": 26},
-    {"nama": "Eli Herliani", "kode": 27},
-    {"nama": "Toharudin", "kode": 28},
-    {"nama": "Mia Purnamasan", "kode": 29},
-    {"nama": "Ahmad Firmansyah", "kode": 30},
-    {"nama": "Indah Pumamasari", "kode": 31},
-    {"nama": "Enjang Sadam", "kode": 32},
-    {"nama": "Ihda Fitriyati", "kode": 33},
-    {"nama": "Bulan Arlia Fitri", "kode": 34},
-    {"nama": "Wahyuni", "kode": 35},
-    {"nama": "Baban Barlian", "kode": 36},
-    {"nama": "Sari Yulyanengsih", "kode": 37},
-    {"nama": "Alek Abules", "kode": 38},
-    {"nama": "Rano Sulisto", "kode": 39},
-    {"nama": "Hanim Magfiroh", "kode": 40},
-    {"nama": "Sirojudin Munir", "kode": 41},
-    {"nama": "Elis Kemaladewi", "kode": 42},
-    {"nama": "Wahyu Heri Indiyanto", "kode": 43},
-    {"nama": "Neneng Yunita", "kode": 44},
-    {"nama": "Lisa Wisuda Ningrum", "kode": 45},
-    {"nama": "Oriza Basmah Najibah", "kode": 46},
-    {"nama": "Dian Nurhasanah", "kode": 47},
-    {"nama": "Indra Lesmana", "kode": 48},
-    {"nama": "Batara Imanuela", "kode": 49},
-    {"nama": "Renny Yuliyanti", "kode": 50},
-    {"nama": "Nadia Khaerunnisa", "kode": 51},
-    {"nama": "Siti Zakiah Khairunnisa", "kode": 52},
-    {"nama": "Dimas Azhar Alauddin", "kode": 53},
-    {"nama": "Taufik Deliyawan", "kode": 54},
-    {"nama": "Sinta Dwiyani Silviana", "kode": 55},
-    {"nama": "Synthia Tresna Suandi", "kode": 56},
-    {"nama": "Aulia Nur Azmi", "kode": 57},
-    {"nama": "Yulianti Widiastuti", "kode": 58},
-    {"nama": "Pani Prihartini", "kode": 59},
-    {"nama": "Ahmad Zulfiqor", "kode": 60},
-    {"nama": "Elida Aulia Rahmah", "kode": 61}
-  ]
+let data = ["FITRA RAHMAN MANGUNSONG-0085004127","SHERLY NISRINA YULIANI-232410408 ","ZAHROTUL NUR FUADIYAH-0072371529","NANDA RISKY PUTRI REGYANS-0081883688"]
   
   async function sendData() {
     for (let entry of data) {
       try {
+        
+        let nama = entry.split("-")[0]
+        let kode = entry.split("-")[1]
         // Send the data to the API
-        const response = await fetch('https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev/api/submit', {
+        const response = await fetch('https://8080-rplsaci-pemiluapi-jfvwph8s12t.ws-us116.gitpod.io/api/submit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            nama: entry.nama,
-            kode: entry.kode
+            nama,
+            kode
           })
         });
   

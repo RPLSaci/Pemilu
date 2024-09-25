@@ -6,5 +6,5 @@ module.exports = {
         'osis': {  DEFAULT: '#9C7344',  50: '#E0CDB8',  100: '#DAC3A9',  200: '#CDAF8D',  300: '#C19C71',  400: '#B58854',  500: '#9C7344',  600: '#755633',  700: '#4E3922',  800: '#271D11',  900: '#000000'},
       },
   },
-  plugins: [require('daisyui')],
+  plugins: [require('daisyui'),require("flowbite")],
 };
