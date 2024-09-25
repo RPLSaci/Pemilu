@@ -166,7 +166,7 @@ const pemilihan = {
     }
 };
 async function init() {
-    let BASEAPI = "https://8080-rplsaci-pemiluapi-jfvwph8s12t.ws-us116.gitpod.io";
+    let BASEAPI = "https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev";
     // Ambil data login dari localStorage
     const data = JSON.parse(localStorage.getItem("loginObject"));
     console.log(data);
@@ -212,7 +212,7 @@ async function init() {
 // `;
 }
 async function kirim() {
-    let BASEAPI = "https://8080-rplsaci-pemiluapi-jfvwph8s12t.ws-us116.gitpod.io";
+    let BASEAPI = "https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev";
     const data = JSON.parse(localStorage.getItem("loginObject"));
     console.log(data);
     // Cek apakah data login tersedia
@@ -268,4 +268,4 @@ async function kirim() {
 }
 init();
 
-//# sourceMappingURL=success.d44b467c.js.map
+//# sourceMappingURL=success.932ebbc8.js.map

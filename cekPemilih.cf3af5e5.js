@@ -1,5 +1,5 @@
 async function init() {
-    let res = await fetch("https://8080-rplsaci-pemiluapi-jfvwph8s12t.ws-us116.gitpod.io/api/user/getall");
+    let res = await fetch("https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev/api/user/getall");
     let data = await res.json();
     let i = 0;
     console.log(data.data.filter((e)=>e.WaktuPemilihan && e.kandidatMPK));
@@ -35,7 +35,7 @@ async function init() {
     });
 }
 async function hapus(nisn, password) {
-    let BASEAPI = "https://8080-rplsaci-pemiluapi-jfvwph8s12t.ws-us116.gitpod.io";
+    let BASEAPI = "https://redesigned-lamp-wx969x4q6g6f599x-8080.app.github.dev";
     try {
         const responseAkhir = await fetch(BASEAPI + "/api/user/Cancel", {
             method: "POST",
@@ -56,4 +56,4 @@ async function hapus(nisn, password) {
 }
 init(); // setInterval(init, 5 * 1000)
 
-//# sourceMappingURL=cekPemilih.83823d41.js.map
+//# sourceMappingURL=cekPemilih.cf3af5e5.js.map
